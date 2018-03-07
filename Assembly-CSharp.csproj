@@ -51,7 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bul_Move.cs" />
+     <Compile Include="Assets\Scripts\Dea_Move.cs" />
+     <Compile Include="Assets\Scripts\Eff_Move.cs" />
+     <Compile Include="Assets\Scripts\Mob_Move.cs" />
      <Compile Include="Assets\Scripts\Ply_Move.cs" />
+     <Compile Include="Assets\Scripts\Txt_Move.cs" />
+     <Compile Include="Assets\Scripts\Zen_Move.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/joyonghyeon/UnityProject/LuckyPoorGame/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
