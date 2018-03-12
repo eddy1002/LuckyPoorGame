@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Eff_Move : MonoBehaviour {
+	public SpriteRenderer effectImage;
+	public Sprite[] images;
+
 	public float power;
 
 	// Use this for initialization
@@ -23,6 +26,12 @@ public class Eff_Move : MonoBehaviour {
 		if (mob) {
 			mob.GetComponent<Mob_Move> ().GetDamage (power);
 		}
+	}
+
+	public void Setting(int imageNum, float powerSet, float sizeX, float sizeY) {
+		effectImage.sprite = images [imageNum];
+		power = powerSet;
+		gameObject.transform.localScale = new Vector3 (sizeX, sizeY, 1.0f);
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {

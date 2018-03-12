@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 28fdc1befd1144fef8f4e916fc99e2c6
+timeCreated: 1520818056
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Binggrae
+  fontNames:
+  - Binggrae
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: cad14de8d00f14ab1b316c793e34ff0e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

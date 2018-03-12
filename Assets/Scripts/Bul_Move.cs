@@ -5,9 +5,19 @@ using UnityEngine;
 public class Bul_Move : MonoBehaviour {
 	public GameObject[] effects;
 
+	public SpriteRenderer bulletImage;
+	public Sprite[] images;
+
+	public int bulletID;
+
 	public float lifeTime;
 	public float lifeTimeMax;
 	public float power;
+	public float[] powerList;
+	public float[] sizeX;
+	public float[] sizeY;
+	public float[] effSizeX;
+	public float[] effSizeY;
 
 	// Use this for initialization
 	void Start () {
@@ -28,14 +38,21 @@ public class Bul_Move : MonoBehaviour {
 	}
 
 	public void Death() {
-		lifeTime = 0.0f;
-		PlayEffect ();
+		if (lifeTime > 0.0f) {
+			lifeTime = 0.0f;
+			PlayEffect ();
 
-		gameObject.SetActive (false);
+			gameObject.SetActive (false);
+		}
 	}
 
-	public void Setting() {
+	public void Setting(int ID) {
 		lifeTime = lifeTimeMax;
+
+		bulletID = ID;
+		bulletImage.sprite = images [ID];
+		gameObject.transform.localScale = new Vector3 (sizeX [ID], sizeY [ID], 1.0f);
+		power = powerList [ID];
 	}
 
 	public void PlayEffect() {
@@ -45,6 +62,7 @@ public class Bul_Move : MonoBehaviour {
 		if (effect) {
 			effect.transform.position = gameObject.transform.position;
 			effect.SetActive (true);
+			effect.GetComponent<Eff_Move> ().Setting (bulletID, power * 0.5f, effSizeX [bulletID], effSizeY [bulletID]);
 		}
 	}
 

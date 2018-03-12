@@ -91,7 +91,7 @@ public class Mob_Move : MonoBehaviour {
 
 		if (death) {
 			death.SetActive (true);
-			death.transform.position = gameObject.transform.position - new Vector3(0.0f, 3.5f, 0.0f);
+			death.transform.position = gameObject.transform.position - new Vector3(0.0f, 2.5f, 0.0f);
 		}
 
 		gameObject.SetActive (false);
